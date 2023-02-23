@@ -2,17 +2,39 @@
 
 int main(void)
 {
-    size_t size = 10;
-    char *arg[] = {"s"};
-    char *buf = malloc(sizeof(char) * size);
+    char *cmd = NULL;
+    size_t len = 0;
+    char *stkn;
+    pid_t pid;
+    int status;
+
     while (1)
     {
         printf("$ ");
-        getline(&buf, &size, stdin);
+        getline(&cmd, &len, stdin);
+        stkn = strtok(cmd, " \n");
+        char *arr[] = {stkn, NULL};
+        pid = fork();
+        
+        if (pid == -1)
+        {
+            perror("Error");
+            return (1);
+        }
 
-        printf("buf: %s", buf);
+        if (pid == 0)
+        {
+            if (execve(stkn, arr, NULL) == -1)
+            {
+                perror("Error");
+            }
+        }
+        else
+        {
+            wait(&status);
+        }
     }
-    free(buf);
+
 
     return 0;
 }
