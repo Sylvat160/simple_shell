@@ -1,11 +1,9 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <unistd.h>
+#include "shell.h"
 
 int main(void)
 {
     size_t size = 10;
+    char *arg[] = {"s"};
     char *buf = malloc(sizeof(char) * size);
     while (1)
     {

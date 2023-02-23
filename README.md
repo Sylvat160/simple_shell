@@ -112,3 +112,38 @@ write (man 2 write)
 ```
 gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh
 ```
+
+
+### Standard Librairies
+
+```
+stdio.h: contains functions for input/output operations such as printf, scanf, getline, etc.
+```
+```
+stdlib.h: contains functions for general-purpose memory allocation and program control such as malloc, free, exit, etc.
+```
+```
+signal.h: contains functions and macros related to handling signals, such as signal, sigaction, SIGINT, etc.
+```
+```
+fcntl.h: contains functions and constants related to file control, such as open, fcntl, O_RDONLY, O_WRONLY, O_CREAT, etc.
+```
+```
+sys/types.h: contains definitions of various data types used in system calls, such as pid_t, size_t, etc.
+```
+```
+sys/stat.h: contains structures and constants used for file system operations, such as struct stat, S_IRUSR, S_IWGRP, etc.
+```
+```
+sys/wait.h: contains functions and macros related to process management and synchronization, such as wait, waitpid, WIFEXITED, WIFSIGNALED, etc.
+```
+```
+unistd.h: contains various constants, types, and function declarations related to system calls, such as fork, execve, pipe, chdir, getpid, etc.
+```
+```
+errno.h: contains the definitions of error numbers and variables that are set by various system calls and 
+library functions to indicate errors, such as errno, EACCES, EINVAL, etc.
+```
+```
+These headers are all standard C libraries that provide various functions and data types needed for the system calls and other functions used in the code.
+```
