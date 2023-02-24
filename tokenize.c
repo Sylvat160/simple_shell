@@ -93,7 +93,7 @@ if (numwords == 0)
 {
 return (NULL);
 }
-s = malloc((1 + numwords) * sizeof(char *));
+s = malloc(sizeof(char *) * (1 + numwords));
 if (!s)
 {
 return (NULL);
