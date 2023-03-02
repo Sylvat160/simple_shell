@@ -13,4 +13,9 @@
 #include <fcntl.h>
 #include <errno.h>
 
+#define BUFFER_SIZE 1024
+
+/* Function prototypes */
+void _chdir(char *path);
+
 #endif
